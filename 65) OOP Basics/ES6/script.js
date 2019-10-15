@@ -133,35 +133,35 @@
 // метод isDate для проверки даты и 
 // метод isPhone для проверки телефона:
 
-class Validator {
-    constructor() {
+// class Validator {
+//     constructor() {
 
-    }
-    setIsEmail(str) {
-        let reg = /^[a-zA-Z0-9-_\.]+\@[a-z].?[a-z].?[a-z]/;
-        return reg.test(str);
-    }
-    setIsDomain(str) {
-        let reg = /^[a-zA-z]+\.+[a-z]/;
-        return reg.test(str);
-    }
-    setIsDate(str) {
-        let reg = /[0-3]+[0-9]+\.+[0-1][0-9]+\.[0-9]{4}$/;
-        return reg.test(str);
-    }
-    setIsPhone(str) {
-        let reg = (/^\+38(\s{1,})?((\([0-9]{3}\))|([0-9]{3}))(\s{1,})?[0-9]{2}(\s{1,})?[0-9]{2}(\s{1,})?[0-9]{3}(\s{1,})?$/);
-        return reg.test(str);
-    }
+//     }
+//     setIsEmail(str) {
+//         let reg = /^[a-zA-Z0-9-_\.]+\@[a-z].?[a-z].?[a-z]/;
+//         return reg.test(str);
+//     }
+//     setIsDomain(str) {
+//         let reg = /^[a-zA-z]+\.+[a-z]/;
+//         return reg.test(str);
+//     }
+//     setIsDate(str) {
+//         let reg = /[0-3]+[0-9]+\.+[0-1][0-9]+\.[0-9]{4}$/;
+//         return reg.test(str);
+//     }
+//     setIsPhone(str) {
+//         let reg = (/^\+38(\s{1,})?((\([0-9]{3}\))|([0-9]{3}))(\s{1,})?[0-9]{2}(\s{1,})?[0-9]{2}(\s{1,})?[0-9]{3}(\s{1,})?$/);
+//         return reg.test(str);
+//     }
 
 
 
-}
+// }
 
-let validator = new Validator();
+// let validator = new Validator();
 
-console.log(validator.setIsEmail('lksd2k@mail.ru'));
-console.log(validator.setIsDomain('testDomain.com'));
-console.log(validator.setIsDate('12.05.2280'));
-console.log(validator.setIsPhone('+38(095)4647488'));
+// console.log(validator.setIsEmail('lksd2k@mail.ru'));
+// console.log(validator.setIsDomain('testDomain.com'));
+// console.log(validator.setIsDate('12.05.2280'));
+// console.log(validator.setIsPhone('+38(095)4647488'));
 
