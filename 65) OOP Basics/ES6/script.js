@@ -23,8 +23,8 @@
 // console.log(worker.getSalary());
 // console.log('Сумма зарплат двух рабочих: ' + sumSalary);
 
-
 // ************************************
+
 // Геттеры и сеттеры
 // 2)Модифицируйте класс Worker из предыдущей задачи следующим образом: 
 // сделайте все его свойства приватными, а для их чтения сделайте методы-геттеры. 
@@ -81,6 +81,8 @@
 // worker2.setDays(24);
 // console.log(worker2.getSalary());
 
+// **********************************************************
+
 // 4)Реализуйте класс MyString, который будет иметь следующие методы: 
 // метод reverse(), который параметром принимает строку, 
 // а возвращает ее в перевернутом виде, 
@@ -89,18 +91,77 @@
 // метод ucWords, который принимает строку и 
 // делает заглавной первую букву каждого слова этой строки.
 
-class MyString {
-    constructor(str) {
-        this._str = str;
+
+// class MyString {
+//     constructor(str) {
+//         this._str = str;
+//     }
+//     setReverse(str) {
+//         let arr = str.split('').reverse().join('');
+//         return arr;
+//     }
+//     setUcFirst(str) {
+//         return str.charAt(0).toUpperCase() + str.slice(1);
+//     }
+//     setUcWords(str) {
+//         let arr = str.split(' ');
+//         arr.forEach(element => {
+//             let arrEl = element.charAt(0).toUpperCase() + element.slice(1);
+//             let newArr = [];
+//             newArr.push(arrEl);
+//             // console.log(newArr);
+//             return newArr;
+
+//         });
+//     }
+// }
+
+// let string = new MyString();
+
+// console.log(string.setReverse('abcdefg'));
+// console.log(string.setUcFirst('qazwsxedc'));
+// console.log(string.setUcWords('qwer dfgghh jjnbvd'));
+
+// ******************************************************
+
+// 5) Реализуйте класс Validator, который будет проверять строки. 
+// К примеру, у него будет метод isEmail параметром принимает строку и проверяет, 
+// является ли она корректным емейлом или нет. 
+// Если является - возвращает true, если не является - то false. 
+// Кроме того, класс будет иметь следующие методы: 
+// метод isDomain для проверки домена, 
+// метод isDate для проверки даты и 
+// метод isPhone для проверки телефона:
+
+class Validator {
+    constructor() {
+
     }
-    setReverse(str) {
-        return this._str = str;
+    setIsEmail(str) {
+        let reg = /^[a-zA-Z0-9-_\.]+\@[a-z].?[a-z].?[a-z]/;
+        return reg.test(str);
     }
+    setIsDomain(str) {
+        let reg = /^[a-zA-z]+\.+[a-z]/;
+        return reg.test(str);
+    }
+    setIsDate(str) {
+        let reg = /[0-3]+[0-9]+\.+[0-1][0-9]+\.[0-9]{4}$/;
+        return reg.test(str);
+    }
+    setIsPhone(str) {
+        let reg = (/^\+38(\s{1,})?((\([0-9]{3}\))|([0-9]{3}))(\s{1,})?[0-9]{2}(\s{1,})?[0-9]{2}(\s{1,})?[0-9]{3}(\s{1,})?$/);
+        return reg.test(str);
+    }
+
+
 
 }
 
-let string = new MyString();
+let validator = new Validator();
 
-console.log(string.setReverse('asdfgh'));
-
+console.log(validator.setIsEmail('lksd2k@mail.ru'));
+console.log(validator.setIsDomain('testDomain.com'));
+console.log(validator.setIsDate('12.05.2280'));
+console.log(validator.setIsPhone('+38(095)4647488'));
 
