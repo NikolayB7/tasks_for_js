@@ -9,6 +9,7 @@ year (год поступления в вуз). Класс должен имет
 Курс вычисляется так: нужно от текущего года отнять год поступления в вуз. 
 Текущий год получите самостоятельно.*/
 
+
 class User {
     constructor(name, surname, year) {
         this.name = name;
@@ -31,10 +32,6 @@ class Student extends User {
 
     }
 }
-
-
-
-
 
 let stud = new Student('Nick', 'Bil', 2010);
 

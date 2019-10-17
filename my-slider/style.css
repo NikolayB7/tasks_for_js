@@ -1,0 +1,25 @@
+.container{
+    position: relative;
+}
+.slider{
+    position: relative;
+}
+.slide__content{
+
+position: absolute;
+top: 0;
+}
+.slide__img{
+    display: block;
+    max-width: 600px;
+    width: 100%;
+    max-height: 400px;
+}
+.button__group{
+position: absolute;
+top: 0;
+
+}
+.btn{
+
+}
