@@ -44,6 +44,12 @@ function Slider(element) {
 
     // write prev
     this.prev = function () {
+        var prevCounter = self.counter + 1;
+        if (prevCounter >= arr.length) {
+            prevCounter = 0;
+        }
+        self.setCounter(prevCounter);
+        self.toggle();
 
     };
 
@@ -63,7 +69,8 @@ function Slider(element) {
 
     // write this
     this.hideSlide = function (slideIndex) {
-
+        var slide = self.dom.slide[slideIndex];
+        slide.style.display = "none";
     };
 
     this.init();
